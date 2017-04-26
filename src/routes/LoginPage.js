@@ -5,6 +5,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { List, InputItem, Button, View, Flex, Text, WhiteSpace } from 'antd-mobile';
 import { createForm } from 'rc-form';
+import ListItem from "antd-mobile/lib/list/ListItem.web.d";
 
 class LoginPage extends React.Component {
 
@@ -27,8 +28,12 @@ class LoginPage extends React.Component {
         </Flex>
         <WhiteSpace size="lg" />
         <List>
-          <InputItem placeholder="请输入手机号" clear {...getFieldProps('mobile')} />
-          <InputItem placeholder="请输入验证码" clear {...getFieldProps('vCode')} extra={<Button type="primary" size="small" inline>获取验证码</Button>} />
+          <List.Item>
+            <InputItem placeholder="请输入手机号" clear {...getFieldProps('mobile')} />
+          </List.Item>
+          <List.Item extra={<Button type="primary" size="small" inline>获取验证码</Button>}>
+            <InputItem placeholder="请输入验证码" clear {...getFieldProps('vCode')} />
+          </List.Item>
           <List.Item>
             <Button size="large" onClick={this.login}>立即登录</Button>
           </List.Item>
