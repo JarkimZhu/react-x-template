@@ -5,7 +5,6 @@ import React from 'react';
 import { connect } from 'dva';
 import { List, InputItem, Button, View, Flex, Text, WhiteSpace } from 'antd-mobile';
 import { createForm } from 'rc-form';
-import ListItem from "antd-mobile/lib/list/ListItem.web.d";
 
 class LoginPage extends React.Component {
 
