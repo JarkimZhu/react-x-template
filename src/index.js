@@ -5,9 +5,9 @@ import registerModels from './models/index';
 
 // 1. Initialize
 const app = dva({
-  onError(e) {
-    console.log('onError', e);
-  },
+  // onError(e) {
+  //   console.log('onError', e);
+  // },
 });
 
 // 2. Plugins

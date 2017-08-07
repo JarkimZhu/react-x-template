@@ -1,54 +1,31 @@
-module.exports = () => {
-  return {
-    'color-text-base': '#333333',
-    'color-text-placeholder': '#cccccc',
-    'color-text-disabled': 'rgba(0, 0, 0, 0.08)',
-    'color-text-caption': '#a1afb4',
-    'color-text-paragraph': '#5d5d5d',
-    'color-link': '#0c77d3',
-    'color-shadow': '#000000',
+const themeStyle = require('./styles').themeStyle;
+const Pixel = require('./Pixel');
 
-    // 背景色
-    'fill-body': '#f1f6f8',
-    'fill-tap': '#ddd',
-    'fill-disabled': '#ddd',
-    'fill-mask': 'rgba(0, 0, 0, 0.65)',
-    'fill-overlay-inverse': 'rgba(0, 0, 0, 0.7)',
+module.exports = Object.assign(themeStyle, {
+  font_size_heading: Pixel.toDip(themeStyle.font_size_heading),
 
-    // 全局/品牌色
-    'brand-primary': '#f35833',
-    'brand-primary-tap': '#e05947',
-    'brand-success': '#52cd4c',
-    'brand-error': '#f35833',
-    'brand-important': '#ff3b30',
+  button_height: Pixel.toDip(themeStyle.button_height),
+  button_font_size: Pixel.toDip(themeStyle.button_font_size),
+  button_height_sm: Pixel.toDip(themeStyle.button_height_sm),
 
-    'border-color-base': '#eeeeee',
+  tabs_height: Pixel.toDip(themeStyle.tabs_height),
+  tabs_font_size_heading: Pixel.toDip(themeStyle.tabs_font_size_heading),
 
-    'button-height': '86px',
-    'button-font-size': '40px',
-    'button-height-sm': '50px',
+  list_item_height: Pixel.toDip(themeStyle.list_item_height),
+  segmented_control_height: Pixel.toDip(themeStyle.segmented_control_height),
+  tag_height: Pixel.toDip(themeStyle.tag_height),
+  link_button_font_size: Pixel.toDip(themeStyle.link_button_font_size),
 
-    'tabs-height': '70px',
+  navbar_height: Pixel.toDip(themeStyle.navbar_height),
 
-    'list-item-height': '96px',
-    'segmented-control-height': '60px',
-    'tag-height': '36px',
+  radius_xs: Pixel.toDip(themeStyle.radius_xs),
+  radius_md: Pixel.toDip(themeStyle.radius_md),
 
-    'font-size-base': '28px',
-    'font-size-heading': '32px',
+  h_spacing_sm: Pixel.toDip(themeStyle.h_spacing_sm),
+  h_spacing_md: Pixel.toDip(themeStyle.h_spacing_md),
+  h_spacing_lg: Pixel.toDip(themeStyle.h_spacing_lg),
 
-    'link-button-font-size': '36px',
-
-    'radius-xs': '2px',
-    'radius-md': '8px',
-
-    'h-spacing-sm': '10px',
-    'h-spacing-md': '20px',
-
-    'v-spacing-xs': '8px',
-    'v-spacing-md': '20px',
-    'v-spacing-xl': '40px',
-
-    'notice-bar-fill': '#f4faff',
-  };
-};
+  v_spacing_xs: Pixel.toDip(themeStyle.v_spacing_xs),
+  v_spacing_md: Pixel.toDip(themeStyle.v_spacing_md),
+  v_spacing_xl: Pixel.toDip(themeStyle.v_spacing_xl),
+});

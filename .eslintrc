@@ -1,6 +1,12 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb",
+  "globals": {
+    "require": true,
+    "window": true,
+    "global": true,
+    "FormData":true
+  },
   "rules": {
     "generator-star-spacing": [0],
     "consistent-return": [0],
@@ -22,7 +28,9 @@
     "no-bitwise": [0],
     "no-cond-assign": [0],
     "import/no-unresolved": [0],
-    "require-yield": [1]
+    "require-yield": [1],
+    "no-underscore-dangle": [0],
+    "no-prototype-builtins": [1]
   },
   "parserOptions": {
     "ecmaFeatures": {

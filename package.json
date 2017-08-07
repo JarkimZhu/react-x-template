@@ -4,30 +4,34 @@
   "private": true,
   "scripts": {
     "native-start": "node node_modules/react-native/local-cli/cli.js start",
+    "native-theme": "node scripts/custom-rn-theme",
     "test": "jest",
     "start": "roadhog server",
     "build": "roadhog build",
     "lint": "eslint --ext .js src test",
-    
+    "precommit": "npm run lint"
   },
   "engines": {
     "install-node": "6.9.2"
   },
   "dependencies": {
-    "antd-mobile": "^1.0.8",
+    "antd-mobile": "^1.6.0",
     "babel-runtime": "^6.23.0",
     "dva": "^1.2.1",
+    "dva-loading": "^0.2.1",
     "rc-form": "^1.3.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-native": "0.42.3",
-    "react-native-navigator-router": "^0.2.1"
+    "react-native-config": "^0.5.0",
+    "react-native-navigator-router": "^0.2.1",
+    "react-native-storage": "^0.2.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "babel-jest": "19.0.0",
     "babel-plugin-dva-hmr": "^0.3.2",
-    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-import": "^1.3.1",
     "babel-plugin-transform-runtime": "^6.9.0",
     "babel-preset-react-native": "1.9.1",
     "eslint": "^3.12.2",
@@ -41,7 +45,8 @@
     "postcss-pxtorem": "^4.0.0",
     "react-test-renderer": "^15.5.4",
     "redbox-react": "^1.3.2",
-    "roadhog": "^0.5.2"
+    "roadhog": "^0.6.0-beta.6",
+    "svg-sprite-loader": "^0.3.1"
   },
   "jest": {
     "preset": "react-native"

@@ -13,7 +13,7 @@ class PolicyPage extends React.Component {
   render() {
     const { getFieldProps } = this.props.form;
     return (
-      <View style={{backgroundColor: 'white', height: '100%'}}>
+      <View style={{ backgroundColor: 'white', height: '100%' }}>
         <WingBlank>
           <List>
             <InputItem placeholder="车架号" clear {...getFieldProps('frameNo')} />
@@ -33,7 +33,7 @@ class PolicyPage extends React.Component {
 function mapStateToProps(state) {
   const { policy } = state;
   return {
-    policy
+    policy,
   };
 }
 

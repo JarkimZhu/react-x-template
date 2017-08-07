@@ -5,6 +5,7 @@
  */
 import { AppRegistry } from 'react-native';
 import dva from 'dva';
+import createLoading from 'dva-loading';
 import { createMemoryHistory } from 'dva/router';
 // import { persistStore, autoRehydrate } from 'redux-persist';
 
@@ -15,11 +16,13 @@ import Router from './src/router';
 const app = dva({
   // initialState: {},
   // extraEnhancers: [autoRehydrate()],
-  onError(e) {
-    console.log('onError', e);
-  },
+  // onError(e) {
+  //   console.log('onError', e);
+  // },
   history: createMemoryHistory('/'),
 });
+
+app.use(createLoading());
 
 registerModels(app);
 app.router(Router);

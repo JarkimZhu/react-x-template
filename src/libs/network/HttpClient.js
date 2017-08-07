@@ -13,27 +13,27 @@ import AjaxHttpClient from './AjaxHttpClient';
  * @class
  */
 class HttpClient {
-    _impl = null;
+  _impl = null;
 
-    constructor() {
-        this._impl = new AjaxHttpClient(false);
-    }
+  constructor() {
+    this._impl = new AjaxHttpClient(false);
+  }
 
-    get(url, request, isScriptGet, enableCache) {
-        return this._impl.get(...arguments);
-    }
+  get(url, request, isScriptGet, enableCache) {
+    return this._impl.get(url, request, isScriptGet, enableCache);
+  }
 
-    post(url, request) {
-        return this._impl.post(...arguments);
-    }
+  post(url, request) {
+    return this._impl.post(url, request);
+  }
 
-    upload(url, request, cb, pcb) {
-        return this._impl.upload(...arguments);
-    }
+  upload(url, request, cb, pcb) {
+    return this._impl.upload(url, request, cb, pcb);
+  }
 
-    clearCookie() {
-        this._impl.clearCookie();
-    }
+  clearCookie() {
+    this._impl.clearCookie();
+  }
 }
 
 const httpClient = new HttpClient();

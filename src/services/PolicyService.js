@@ -5,6 +5,6 @@
 
 export default class PolicyService {
   static getPolicyInfo(frameNo) {
-    return Promise.resolve({ ResponseMessage: '查询成功，无对应数据！' });
+    return Promise.resolve({ ResponseMessage: `${frameNo} 查询成功，无对应数据！` });
   }
 }
